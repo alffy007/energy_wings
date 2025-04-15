@@ -208,6 +208,16 @@ import logo from '../assets/logo.png';
             padding: 1rem;
         }
 
+        .logo-image {
+            height: 45px;
+            width: 45px;
+            margin-top: -5px;
+        }
+
+        .textlogo-image {
+            height: 25px;
+        }
+
         .nav-links {
             display: none;
             position: absolute;
@@ -241,6 +251,22 @@ import logo from '../assets/logo.png';
         .nav-link {
             width: 100%;
             padding: 0.8rem 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo-image {
+            height: 35px;
+            width: 35px;
+            margin-top: -3px;
+        }
+
+        .textlogo-image {
+            height: 20px;
+        }
+
+        .logo-container {
+            gap: 0.5rem;
         }
     }
 </style>

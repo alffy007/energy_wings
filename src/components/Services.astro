@@ -168,19 +168,77 @@ import customized_solutions from '../assets/smart_logistics.jpeg';
 
     @media (max-width: 1200px) {
         .services-grid {
-            gap: 2rem;
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            width: 300px;
         }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 768px) {
+        .services-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+        }
+
         .services-grid {
-            gap: 2rem;
+            gap: 1.5rem;
+            padding: 0 1rem;
+        }
+
+        .service-card {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .service-image {
+            height: 180px;
+        }
+
+        .service-content {
+            padding: 1.25rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.1rem;
+        }
+
+        .service-content p {
+            font-size: 0.95rem;
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
+        .services-section {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+        }
+
         .services-grid {
-            gap: 2rem;
+            gap: 1rem;
+        }
+
+        .service-image {
+            height: 160px;
+        }
+
+        .service-content {
+            padding: 1rem;
         }
     }
 </style>
