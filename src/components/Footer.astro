@@ -1,41 +1,30 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '../assets/textlogo.png';
+import textlogo from '../assets/textlogo.png';
+import logo from '../assets/logo.png';
 ---
 
 <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <div class="footer-logo">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <a href="/" class="logo-container">
                 <Image 
                     src={logo} 
-                    alt="EnergyWings" 
+                    alt="EnergyWings Logo" 
                     class="logo-image" 
-                    height={25} 
+                    height={65} 
+                    width={65} 
+                />
+                <Image 
+                    src={textlogo} 
+                    alt="EnergyWings" 
+                    class="textlogo-image" 
+                    height={30} 
                     width={200} 
                 />
-                <p class="footer-description">Leading Diesel Supply Solutions in UAE</p>
-            </div>
-            <div class="social-links">
-                <a href="#" class="social-link" aria-label="Facebook">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
-                </a>
-                <a href="#" class="social-link" aria-label="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                </a>
-            </div>
+            </a>
+            <p class="footer-description">Leading Diesel Supply Solutions in UAE</p>
         </div>
-
         <div class="footer-section">
             <h3 class="footer-title">Quick Links</h3>
             <ul class="footer-links">
@@ -91,48 +80,43 @@ import logo from '../assets/textlogo.png';
 
 <style>
     .footer {
-        background: #000000;
-        color: #ffffff;
-        padding: 4rem 0 0;
-        position: relative;
+        background: #000;
+        color: #fff;
+        padding: 4rem 2rem;
     }
 
-    .footer::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(to right, transparent, #D4AF37, transparent);
-    }
-
-    .footer-content {
-        max-width: 1200px;
+    .footer-container {
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 0 2rem;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
-    }
-
-    .footer-section {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+        gap: 4rem;
     }
 
     .footer-logo {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .logo-container {
+        display: flex;
         align-items: center;
-        text-align: center;
+        gap: 1rem;
+        text-decoration: none;
     }
 
     .logo-image {
-        height: 25px;
-        width: 200px;
+        height: 65px;
+        width: 65px;
+        filter: brightness(0) invert(1);
+        object-fit: contain;
+        margin-top: -10px;
+    }
+
+    .textlogo-image {
+        height: 30px;
+        width: auto;
         filter: brightness(0) invert(1);
         object-fit: contain;
     }
@@ -142,23 +126,13 @@ import logo from '../assets/textlogo.png';
         opacity: 0.8;
         line-height: 1.6;
         font-size: 1.1rem;
+        margin-top: 0.5rem;
     }
 
-    .social-links {
+    .footer-section {
         display: flex;
-        gap: 1rem;
-        justify-content: center;
-    }
-
-    .social-link {
-        color: #ffffff;
-        opacity: 0.8;
-        transition: all 0.3s ease;
-    }
-
-    .social-link:hover {
-        color: #D4AF37;
-        opacity: 1;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .footer-links {
@@ -258,13 +232,13 @@ import logo from '../assets/textlogo.png';
     }
 
     @media (max-width: 1024px) {
-        .footer-content {
+        .footer-container {
             grid-template-columns: repeat(2, 1fr);
         }
     }
 
     @media (max-width: 768px) {
-        .footer-content {
+        .footer-container {
             grid-template-columns: 1fr;
             gap: 2rem;
         }

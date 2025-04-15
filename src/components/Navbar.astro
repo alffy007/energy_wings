@@ -1,18 +1,26 @@
 ---
 // Import necessary dependencies
 import { Image } from 'astro:assets';
-import logo from '../assets/textlogo.png';
+import textlogo from '../assets/textlogo.png';
+import logo from '../assets/logo.png';
 ---
 
 <nav class="navbar">
     <div class="navbar-container">
         <div class="logo">
-            <a href="/">
+            <a href="/" class="logo-container">
                 <Image 
                     src={logo} 
-                    alt="EnergyWings" 
+                    alt="EnergyWings Logo" 
                     class="logo-image" 
-                    height={50} 
+                    height={65} 
+                    width={65} 
+                />
+                <Image 
+                    src={textlogo} 
+                    alt="EnergyWings" 
+                    class="textlogo-image" 
+                    height={30} 
                     width={200} 
                 />
             </a>
@@ -67,8 +75,23 @@ import logo from '../assets/textlogo.png';
         flex-shrink: 0;
     }
 
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+    }
+
     .logo-image {
-        height: 25px;
+        height: 65px;
+        width: 65px;
+        filter: brightness(0) invert(1);
+        object-fit: contain;
+        margin-top: -10px;
+    }
+
+    .textlogo-image {
+        height: 30px;
         width: auto;
         filter: brightness(0) invert(1);
         object-fit: contain;
