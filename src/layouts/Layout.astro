@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { Image } from 'astro:assets';
 import logo from '../assets/logo.png';
+import WebsiteLoader from '../components/WebsiteLoader.astro';
 ---
 
 <!doctype html>
@@ -39,6 +40,7 @@ import logo from '../assets/logo.png';
     <title>Energy Wings Diesel | Your Trusted Diesel Solutions Partner</title>
   </head>
   <body class="bg-gray-100 text-gray-900">
+    <WebsiteLoader />
     <slot />
   </body>
 </html>
