@@ -1,0 +1,228 @@
+<section class="products-section" id="products">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Premium quality fuels and lubricants for diverse applications</p>
+        </div>
+
+        <div class="products-timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="product-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3h18v18H3z"/>
+                            <path d="M12 8v8"/>
+                            <path d="M8 12h8"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h3>Diesel Gas Oil</h3>
+                        <p>High-quality diesel suitable for engines, generators, and industrial applications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="product-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <path d="M3.3 7l8.7 5 8.7-5"/>
+                            <path d="M12 22V12"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bunker Supplies</h3>
+                        <p>Supplying fuel for ships at various UAE ports, ensuring compliance with international standards.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="product-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h3>Bulk Fuel Oil</h3>
+                        <p>Long-term contracts for the distribution and supply of bulk fuel oil, covering a comprehensive range of services.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="product-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2v20"/>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                            <path d="M12 2v20"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h3>Lubricant Oils</h3>
+                        <p>Providing various types of lubricant oils essential for machinery and equipment across automotive, industrial, and marine sectors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .products-section {
+        padding: 6rem 0;
+        background: linear-gradient(to bottom, #000000, #1a1a1a);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #ffffff, #D4AF37);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+        color: #D4AF37;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .products-timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem 0;
+    }
+
+    .products-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to bottom, #D4AF37, transparent);
+        z-index: 1;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 3rem;
+        z-index: 2;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 12px;
+        height: 12px;
+        background: #D4AF37;
+        border-radius: 50%;
+        z-index: 3;
+    }
+
+    .timeline-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    .timeline-content:hover {
+        transform: translateX(10px);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+
+    .product-icon {
+        flex-shrink: 0;
+        width: 60px;
+        height: 60px;
+        background: rgba(212, 175, 55, 0.1);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product-icon svg {
+        width: 30px;
+        height: 30px;
+        color: #D4AF37;
+    }
+
+    .product-info {
+        flex: 1;
+    }
+
+    .product-info h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #D4AF37;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-info p {
+        color: #ffffff;
+        line-height: 1.6;
+        opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        .products-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .products-timeline::before {
+            left: 30px;
+        }
+
+        .timeline-item::before {
+            left: 30px;
+        }
+
+        .timeline-content {
+            margin-left: 60px;
+        }
+    }
+</style>

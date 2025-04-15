@@ -1,0 +1,236 @@
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2 class="section-title">About Energy Wings</h2>
+                <div class="section-subtitle">Leading Diesel Supply Solutions in UAE</div>
+                
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3>Fast Delivery</h3>
+                        <p>24/7 rapid response and delivery across all emirates with state-of-the-art fleet.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3>Quality Assured</h3>
+                        <p>Premium grade diesel fuel meeting international quality standards.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                            </svg>
+                        </div>
+                        <h3>Expert Team</h3>
+                        <p>Highly trained professionals ensuring safe and efficient fuel delivery.</p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3>Industry Leader</h3>
+                        <p>Years of experience serving diverse sectors across the UAE.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .about-section {
+        padding: 6rem 0;
+        background: linear-gradient(180deg, 
+            rgba(0, 0, 0, 1) 0%,
+            rgba(0, 0, 0, 0.95) 50%,
+            rgba(0, 0, 0, 1) 100%
+        );
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.9) 50%,
+            rgba(0, 0, 0, 0.8) 100%
+        );
+        z-index: 0;
+        animation: gradientShift 10s ease infinite;
+    }
+
+    @keyframes gradientShift {
+        0% {
+            opacity: 0.8;
+        }
+        50% {
+            opacity: 0.9;
+        }
+        100% {
+            opacity: 0.8;
+        }
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .content-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+
+    .text-content {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(to right, #ffffff, #D4AF37);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .section-subtitle {
+        font-size: 1.25rem;
+        color: #D4AF37;
+        margin-bottom: 3rem;
+    }
+
+    .about-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .about-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        text-align: left;
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        width: 300px;
+        flex: 0 0 auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .about-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(to right, transparent, #D4AF37, transparent);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .about-card:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(212, 175, 55, 0.3);
+    }
+
+    .about-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .icon-wrapper {
+        background: rgba(212, 175, 55, 0.1);
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .icon {
+        width: 30px;
+        height: 30px;
+        color: #D4AF37;
+        transition: all 0.3s ease;
+    }
+
+    .about-card:hover .icon-wrapper {
+        background: rgba(212, 175, 55, 0.2);
+        transform: scale(1.1);
+    }
+
+    .about-card:hover .icon {
+        transform: scale(1.1);
+    }
+
+    .about-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #D4AF37;
+        margin-bottom: 1rem;
+    }
+
+    .about-card p {
+        color: #ffffff;
+        line-height: 1.6;
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+        .about-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .about-grid {
+            gap: 1.5rem;
+        }
+
+        .about-card {
+            padding: 1.5rem;
+        }
+    }
+</style> 

@@ -1,0 +1,78 @@
+<div class="scrolling-divider">
+    <div class="scrolling-wrapper">
+        <div class="scrolling-text">
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+        </div>
+        <div class="scrolling-text" aria-hidden="true">
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+            <span>ENERGY WINGS</span>
+        </div>
+    </div>
+</div>
+
+<style>
+    .scrolling-divider {
+        background: #000;
+        padding: 1rem 0;
+        overflow: hidden;
+        position: relative;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+
+    .scrolling-wrapper {
+        display: flex;
+        width: 100%;
+    }
+
+    .scrolling-text {
+        display: flex;
+        white-space: nowrap;
+        animation: scroll 20s linear infinite;
+    }
+
+    .scrolling-text span {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #D4AF37;
+        margin-right: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.8;
+        transition: all 0.3s ease;
+    }
+
+    .scrolling-text span:hover {
+        opacity: 1;
+        color: #ffffff;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .scrolling-text span {
+            font-size: 0.9rem;
+            margin-right: 1.2rem;
+        }
+    }
+</style> 
