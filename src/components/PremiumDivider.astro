@@ -1,0 +1,42 @@
+<div class="premium-divider">
+    <div class="strike-line"></div>
+</div>
+
+<style>
+    .premium-divider {
+        width: 100%;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+    }
+
+    .strike-line {
+        width: 60%;
+        height: 1px;
+        background: linear-gradient(to right, 
+            transparent 0%,
+            #D4AF37 30%, 
+            #D4AF37 70%, 
+            transparent 100%
+        );
+        position: relative;
+    }
+
+    .strike-line::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(to right, 
+            transparent 0%,
+            rgba(212, 175, 55, 0.3) 30%, 
+            rgba(212, 175, 55, 0.3) 70%, 
+            transparent 100%
+        );
+        filter: blur(2px);
+    }
+</style> 
