@@ -9,18 +9,20 @@ import logo from '../assets/logo.png';
     <div class="navbar-container">
         <div class="logo">
             <a href="/" class="logo-container">
-                <Image 
-                    src={logo} 
-                    alt="EnergyWings Logo" 
-                    class="logo-image" 
-                    height={65} 
-                    width={65} 
-                />
+                <div class="logo-wrapper">
+                    <Image 
+                        src={logo} 
+                        alt="EnergyWings Logo" 
+                        class="logo-image" 
+                        height={50} 
+                        width={50} 
+                    />
+                </div>
                 <Image 
                     src={textlogo} 
                     alt="EnergyWings" 
                     class="textlogo-image" 
-                    height={30} 
+                    height={25} 
                     width={200} 
                 />
             </a>
@@ -82,16 +84,35 @@ import logo from '../assets/logo.png';
         text-decoration: none;
     }
 
+    .logo-wrapper {
+        position: relative;
+    }
+
     .logo-image {
-        height: 65px;
-        width: 65px;
+        height: 50px;
+        width: 50px;
         filter: brightness(0) invert(1);
         object-fit: contain;
-        margin-top: -10px;
+    }
+
+    .logo-container:hover .logo-image {
+        animation: quickFlip 0.5s ease;
+    }
+
+    @keyframes quickFlip {
+        0% {
+            transform: scaleX(1);
+        }
+        50% {
+            transform: scaleX(-1);
+        }
+        100% {
+            transform: scaleX(1);
+        }
     }
 
     .textlogo-image {
-        height: 30px;
+        height: 25px;
         width: auto;
         filter: brightness(0) invert(1);
         object-fit: contain;
