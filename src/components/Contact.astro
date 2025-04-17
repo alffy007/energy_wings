@@ -12,8 +12,8 @@
                         </div>
                         <div class="detail-content">
                             <h3>Phone</h3>
-                            <p>050 488 2343</p>
-                            <p>058 233 5660</p>
+                            <p><a href="tel:+971504882343">050 488 2343</a></p>
+                            <p><a href="tel:+971582335660">058 233 5660</a></p>
                         </div>
                     </div>
 
@@ -25,7 +25,7 @@
                         </div>
                         <div class="detail-content">
                             <h3>Email</h3>
-                            <p>energywingsdiesel@gmail.com</p>
+                            <p><a href="mailto:info@energywingsdiesel.com">info@energywingsdiesel.com</a></p>
                         </div>
                     </div>
 
@@ -142,6 +142,18 @@
         opacity: 0.9;
     }
 
+    .detail-content a {
+        color: #ffffff;
+        text-decoration: none;
+        opacity: 0.9;
+        transition: all 0.3s ease;
+    }
+
+    .detail-content a:hover {
+        color: #D4AF37;
+        opacity: 1;
+    }
+
     .contact-form {
         background: rgba(255, 255, 255, 0.05);
         padding: 2rem;
@@ -226,14 +238,48 @@
     }
 </style>
 <script>
+    import emailjs from '@emailjs/browser';
+
     const form = document.getElementById('contactForm') as HTMLFormElement;
     if (form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            // Here you would typically handle the form submission
-            // For now, we'll just show an alert
-            alert('Thank you for your message! We will get back to you soon.');
-            form.reset();
+            
+            // Initialize EmailJS with your public key
+            emailjs.init('XdemizdqmwQirmRmO');
+
+            // Show loading state
+            const submitBtn = form.querySelector('.submit-btn') as HTMLButtonElement;
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+
+            // Prepare the email template parameters
+            const templateParams = {
+                from_name: (document.getElementById('name') as HTMLInputElement).value,
+                from_email: (document.getElementById('email') as HTMLInputElement).value,
+                phone: (document.getElementById('phone') as HTMLInputElement).value,
+                message: (document.getElementById('message') as HTMLTextAreaElement).value,
+                to_email: 'info@energywingsdiesel.com' // Recipient email
+            };
+
+            // Send the email
+            emailjs.send('service_i4swifp', 'template_cqooksn', templateParams)
+                .then(function(response) {
+                    // Show success message
+                    alert('Thank you for your message! We will get back to you soon.');
+                    form.reset();
+                })
+                .catch(function(error) {
+                    // Show error message
+                    alert('Sorry, there was an error sending your message. Please try again later.');
+                    console.error('Error:', error);
+                })
+                .finally(function() {
+                    // Reset button state
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 </script>
