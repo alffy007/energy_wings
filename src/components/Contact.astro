@@ -258,8 +258,7 @@
             const templateParams = {
                 from_name: (document.getElementById('name') as HTMLInputElement).value,
                 from_email: (document.getElementById('email') as HTMLInputElement).value,
-                phone: (document.getElementById('phone') as HTMLInputElement).value,
-                message: (document.getElementById('message') as HTMLTextAreaElement).value,
+                message: (document.getElementById('message') as HTMLTextAreaElement).value + '\n\n' + "Phone Number: " + (document.getElementById('phone') as HTMLInputElement).value,
                 to_email: 'info@energywingsdiesel.com' // Recipient email
             };
 

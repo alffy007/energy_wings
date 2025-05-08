@@ -77,6 +77,9 @@ import logo from '../assets/logo.png';
             </div>
         </div>
     </div>
+    <div class="footer-bottom-right">
+        <p>Built by<a href="https://wa.me/918921645661?text=Hey, I saw your website and I would like to know more about your services" target="_blank" rel="noopener noreferrer">Mark-10</a></p>
+    </div>
 </footer>
 
 <style>
@@ -267,5 +270,38 @@ import logo from '../assets/logo.png';
             justify-content: center;
             gap: 1rem;
         }
+    }
+
+    .footer-bottom-right {
+        text-align: center;
+        padding: 1rem 0;
+        background: rgba(212, 175, 55, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    .footer-bottom-right p {
+        margin: 0;
+        color: #ffffff;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    .footer-bottom-right a {
+        color: #D4AF37;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-left: 0.3rem;
+    }
+
+    .footer-bottom-right a:hover {
+        color: #ffffff;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    .footer-bottom-right:hover {
+        background: rgba(212, 175, 55, 0.15);
+        transform: translateY(-2px);
     }
 </style>
