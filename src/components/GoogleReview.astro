@@ -1,6 +1,4 @@
 ---
-import { Image } from 'astro:assets';
-import qrCode from '../assets/google_qr.jpeg';
 ---
 
 <section class="review-section">
@@ -18,12 +16,13 @@ import qrCode from '../assets/google_qr.jpeg';
             </div>
 
             <div class="qr-wrapper">
-                <Image
-                    src={qrCode}
+                <img
+                    src="/google_qr.jpeg"
                     alt="Scan to leave a Google Review"
                     class="qr-image"
-                    width={200}
-                    height={200}
+                    width="200"
+                    height="200"
+                    loading="eager"
                 />
             </div>
 
